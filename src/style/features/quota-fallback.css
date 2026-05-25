@@ -1,0 +1,35 @@
+/* Quota exhausted fallback banner — shown inline after an error */
+
+.claudian-quota-fallback-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: var(--background-modifier-error-hover, rgba(224, 49, 49, 0.08));
+  border: 1px solid var(--background-modifier-error, rgba(224, 49, 49, 0.3));
+  font-size: var(--font-ui-smaller);
+}
+
+.claudian-quota-fallback-label {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.claudian-quota-fallback-btn {
+  cursor: pointer;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--interactive-accent);
+  background: transparent;
+  color: var(--interactive-accent);
+  font-size: var(--font-ui-smaller);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.claudian-quota-fallback-btn:hover {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
