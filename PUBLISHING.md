@@ -32,6 +32,7 @@ Before pushing to GitHub, confirm:
 - internal agent-only files such as `CLAUDE.md` and `AGENTS.md` are not present in the exported copy
 - run `node scripts/audit-public-release.mjs <exported-folder>` if you want an extra automated check outside the export script
 - Claude-maintainer-only workflows that require private OAuth secrets should not be present in the public export
+- optional housekeeping assets such as screenshots or stale/duplicate issue workflows can be omitted from the first public push
 
 ## 4. Create the GitHub repository
 

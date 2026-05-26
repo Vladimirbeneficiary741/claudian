@@ -53,3 +53,9 @@ AI coding agents inside Obsidian, powered by Claude Code, Codex, and optional De
 - Upload `main.js`, `manifest.json`, and `styles.css` to the first release
 - Paste `GITHUB_RELEASE.md` into the release notes
 - Verify Community Plugin metadata before sharing with users
+
+## Suggested Initial Workflow Set
+
+- Keep: `ci.yml`
+- Keep: `release.yml`
+- Omit on first publish: issue housekeeping workflows unless you already want to manage community traffic

@@ -120,6 +120,7 @@ The export flow:
 - removes internal instruction files such as `CLAUDE.md` and `AGENTS.md`
 - clears public metadata fields like author information
 - removes workflow files that depend on private Claude-maintainer secrets
+- keeps the public repo focused on the minimum useful automation for first release
 - runs a public-release audit to catch obvious private paths and runtime leftovers
 
 ## Repository Layout
