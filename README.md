@@ -6,6 +6,11 @@ It supports Claude Code and Codex as primary providers, with optional DeepSeek-c
 
 This public repository is prepared for GitHub release. Personal machine paths, vault-specific configuration, runtime session data, and private keys are intentionally excluded.
 
+## Language
+
+- English: this page
+- 简体中文: [README.zh-CN.md](README.zh-CN.md)
+
 ## Why Claudian
 
 Claudian is designed for people who want an agent workflow inside Obsidian instead of a separate terminal or browser-only chat tool.
