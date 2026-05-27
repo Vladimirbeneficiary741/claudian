@@ -123,13 +123,7 @@ OPENAI_MODEL=deepseek-chat
 powershell -ExecutionPolicy Bypass -File .\scripts\export-public-repo.ps1
 ```
 
-这个导出流程会：
 
-- 排除本地开发和运行态目录
-- 删除 `CLAUDE.md`、`AGENTS.md` 这类内部说明文件
-- 清空作者等公开元数据里的敏感信息
-- 移除依赖私有维护 secret 的 workflow
-- 对导出副本再做一次公开发布审计
 
 ## 仓库结构
 
@@ -149,9 +143,6 @@ scripts/
 tests/
 ```
 
-## 署名与来源
-
-这个代码库基于上游 Claudian 继续整理和扩展，公开分发时建议保留 [NOTICE.md](NOTICE.md)。
 
 ## License
 
